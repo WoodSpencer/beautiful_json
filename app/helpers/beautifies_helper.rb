@@ -1,0 +1,2 @@
+module BeautifiesHelper
+end
