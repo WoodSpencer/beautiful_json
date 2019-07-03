@@ -1,24 +1,6 @@
-# README
+# Beautiful JSON
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![pretty_json](https://user-images.githubusercontent.com/756455/60618129-59015380-9da3-11e9-86f3-ef030c5bdc22.gif)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Beautiful JSON is a full stack solution that beautifies JSON syntax. Easy to
+use and ready for instant deployment,  this application was built with the Ruby on Rails framework.
