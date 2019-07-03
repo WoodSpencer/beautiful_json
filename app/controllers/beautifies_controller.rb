@@ -10,8 +10,12 @@ class BeautifiesController < ApplicationController
   # GET /beautifies/1
   # GET /beautifies/1.json
   def show
+    begin
 
-    render json: JSON.pretty_generate(JSON[@beautify.content.to_s])
+      render json: JSON.pretty_generate(JSON[@beautify.content.to_s])
+    rescue JSON::ParserError => e
+      render text: "null"
+    end
   end
 
   # GET /beautifies/new

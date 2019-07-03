@@ -1,0 +1,32 @@
+html,body {
+    margin:0;
+    padding:0;
+    background-color:white;
+    color:#303030;
+}
+
+html,body,td {
+    font-family:arial,sans-serif;
+}
+
+h1 {
+    text-align:center;
+    color:#606060;
+}
+
+textarea {
+    width:500px;
+    height:270px;
+    }
+
+button {
+	min-height: 1.9rem;
+}
+
+p {
+
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
