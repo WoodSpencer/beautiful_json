@@ -1,6 +1,6 @@
 class BeautifiesController < ApplicationController
   before_action :set_beautify, only: [:show, :edit, :update, :destroy]
-  require 'json'
+
   # GET /beautifies
   # GET /beautifies.json
   def index
@@ -8,13 +8,15 @@ class BeautifiesController < ApplicationController
   end
 
   # GET /beautifies/1
-  # GET /beautifies/1.json
+
   def show
     begin
 
-      render json: JSON.pretty_generate(JSON[@beautify.content.to_s])
+      @text_to_render = JSON.pretty_generate(JSON.parse(@beautify.content))
+
+
     rescue JSON::ParserError => e
-      render text: "null"
+      @text_to_render = "null"
     end
   end
 
@@ -37,7 +39,7 @@ class BeautifiesController < ApplicationController
     respond_to do |format|
       if @beautify.save
         format.html { redirect_to @beautify, notice: 'Beautify was successfully created.' }
-        format.json { render :show, status: :created, location: @beautify }
+
       else
         format.html { render :new }
         format.json { render json: @beautify.errors, status: :unprocessable_entity }
